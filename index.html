@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Software sob medida</title>
+</head>
+
+<body>
+  <section class="container">
+    <aside>
+      <h1>Inserir dados</h1>
+      <div class="form">
+        <div class="entries">
+          <label class="label-text" for="name">Nome</label>
+          <input class="input-text" type="text" name="name" id="name" placeholder="José...">
+        </div>
+        <div class="entries">
+          <label class="label-text" for="company">Nome da Empresa</label>
+          <input class="input-text" type="text" name="company" id="company" placeholder="Mil faces construções">
+        </div>
+        <div class="entries">
+          <label class="label-number" for="percentage">Valor da participação</label>
+          <input class="input-number" type="number" name="percentage" id="percentage" placeholder="R$20.000">
+        </div>
+        <div>
+          <button class="send-button" type="submit">Enviar</button>
+        </div>
+      </div>
+
+    </aside>
+    <aside>
+      <h2 class="text-demo" >Demostrativo ao vivo</h2>
+      <div id="wrapContainer" >
+        <div id="chartContainer" class="chart"></div>
+      </div>
+      <h2>Lista</h2>
+      <div class="block-itens">
+      </div>
+    </aside>
+  </section>
+
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="script.js"></script>
+ 
+</body>
+
+</html>

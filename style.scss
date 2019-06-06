@@ -1,0 +1,145 @@
+// Resets
+body, section, aside, h1, h2, div, label, input, button, canvas, span, p{
+  margin: 0;
+  padding: 0;
+}
+
+// Imports
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&display=swap');
+
+// Scss Styles
+$background-color-horizontal: linear-gradient(90deg, #FB592A 0%, #FE6A2A 100%);
+$background-color-vertical: linear-gradient(0deg, #FB592A 27.01%, #FE6A2A 72.16%);
+$shadow-item: 0px 1px 2px rgba(0, 0, 0, 0.25);
+$shadow-button: 0px 4px 6px rgba(0, 0, 0, 0.25);
+$shadow-content: 2px 2px 3px rgba(0, 0, 0, 0.25);
+$color-dark: #423839;
+$color-light:#ADADAD;
+$hover-color:#57BAF1;
+
+// Mixins
+@mixin input{
+  box-shadow: $shadow-item;
+  border: 1px solid $color-dark;
+}
+
+// Initial Styles
+html{
+  font-family: 'Josefin Sans', sans-serif;
+  box-sizing: border-box;
+}
+h1{
+  font-size: 2em;
+}
+h2{
+  font-size: 1.75em;
+}
+p{
+  font-size: 1em;
+}
+
+
+// Container
+.container{
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  
+}
+
+@media screen and (max-width: 1024px) {
+    .container{
+      grid-template-columns: 1fr;
+    }
+    .text-demo{
+      margin-top: 40px;
+    }
+}
+
+// Body
+.form{
+  .entries{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0 0;
+    .input-text{
+      max-width: 380px;
+      height: 35px;
+      padding-left: 15px;
+      @include input;
+    }
+    .input-number{
+      max-width: 85px;
+      height: 35px;
+      padding-left: 15px;
+      @include input;
+    }
+  }
+  .send-button{
+    margin: 20px 0 0 0;
+    width: 180px;
+    height: 45px;
+    background: $background-color-horizontal;
+    color: white;
+    box-shadow: $shadow-button;
+    border: none;
+    &:hover{
+      cursor: pointer;
+      background: $hover-color;
+    }
+  }
+}
+
+.block-itens{
+  display: grid;
+  grid-template-columns: repeat(3, 240px);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+@media screen and (max-width: 930px){
+  .block-itens{
+    grid-template-columns: repeat(2, 240px);
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 630px){
+  .block-itens{
+    grid-template-columns: 240px;
+    justify-content: center;
+  }
+}
+
+.item{
+  
+  background: $background-color-vertical;
+  box-shadow: $shadow-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .item-name{
+    font-size: 1em;
+    color: white;
+    margin: 10px 0;
+  }
+  .item-company{
+    font-size: 1em;
+    color: white;
+    font-weight: 300;
+  }
+  .item-percentage{
+    font-size: 1.25em;
+    color: white;
+    font-weight: 700;
+    margin: 30px 0;
+  }
+}
+
+.chart{
+  width: auto;
+  height: 300px;
+  margin: 20px;
+}
